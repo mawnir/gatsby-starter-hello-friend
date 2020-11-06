@@ -9,11 +9,12 @@ public_folder: /assets
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "content/blog"
+    folder: "src/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", hint: "Image size 1280x800 works best :)", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
